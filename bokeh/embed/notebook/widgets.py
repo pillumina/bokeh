@@ -89,7 +89,7 @@ class BokehModel(DOMWidget):
         self._document.on_change_dispatch_to(self)
 
     def _document_patched(self, event):
-        msg = Protocol("1.0").create("PATCH-DOC", [event])
+        msg = Protocol().create("PATCH-DOC", [event])
 
         self.send({"msg": "patch", "payload": msg.header_json})
         self.send({"msg": "patch", "payload": msg.metadata_json})
