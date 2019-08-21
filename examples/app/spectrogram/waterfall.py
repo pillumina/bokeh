@@ -5,8 +5,6 @@ from bokeh.models import Renderer
 
 class WaterfallRenderer(Renderer):
 
-    __implementation__ = join(dirname(__file__), "waterfall.ts")
-
     latest = Seq(Float)
 
     palette = Seq(Color)
